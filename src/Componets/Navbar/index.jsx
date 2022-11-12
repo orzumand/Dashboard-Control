@@ -12,7 +12,7 @@ import {
 import { navbar } from "../../utils/navbar";
 import img from "../../Assets/Img/Logo.png";
 const Navbar = () => {
-  const auth = false;
+  const auth = true;
   return (
     <Wrapper>
       <Container>

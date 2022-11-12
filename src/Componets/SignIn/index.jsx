@@ -1,10 +1,11 @@
 import React from "react";
-import { Container } from "./styled";
+import { Container, Left, Right } from "./styled";
 
 const SignIn = () => {
   return (
     <Container>
-      <h1>Signin</h1>
+      <Left></Left>
+      <Right></Right>
     </Container>
   );
 };
