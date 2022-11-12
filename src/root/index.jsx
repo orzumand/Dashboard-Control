@@ -8,6 +8,11 @@ const Root = () => {
     <div>
       <BrowserRouter>
         <Routes>
+          <Route>
+            {navbar.map(({ path, element, id, hidden }) => {
+              return hidden && <Route key={id} path={path} element={element} />;
+            })}
+          </Route>
           <Route element={<Navbar />}>
             {navbar.map((value) => {
               return (
@@ -19,7 +24,7 @@ const Root = () => {
               );
             })}
           </Route>
-          <Route path="/" element={<Navigate to="/asosiy" />} />
+          <Route path="/" element={<Navigate to="/signin" />} />
           <Route path="*" element={<h1>NOTFOUND</h1>} />
         </Routes>
       </BrowserRouter>

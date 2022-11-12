@@ -4,6 +4,7 @@ import LoyihalarPage from "../Pages/Loyihalar";
 import BajarilmoqdaPage from "../Pages/Bajarilmoqda";
 import BajarilganligiPage from "../Pages/Bajarilganligi";
 import BajarilishiKechikmoqdaPage from "../Pages/Bajarilish_Kechikmoqda";
+import SignInPage from "../Pages/SignIn";
 import i1 from "../Assets/Icon/element-3.png";
 import i2 from "../Assets/Icon/chart.png";
 import i3 from "../Assets/Icon/chart-success.png";
@@ -54,5 +55,14 @@ export const navbar = [
     private: false,
     hidden: false,
     icons: i5,
+  },
+  {
+    id: useId,
+    element: <SignInPage />,
+    path: "/signin",
+    title: "SignIn",
+    private: false,
+    hidden: true,
+    icons: null,
   },
 ];

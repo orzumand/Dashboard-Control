@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink, Outlet } from "react-router-dom";
+import { Navigate, NavLink, Outlet } from "react-router-dom";
 import {
   Container,
   Logo,
@@ -12,6 +12,7 @@ import {
 import { navbar } from "../../utils/navbar";
 import img from "../../Assets/Img/Logo.png";
 const Navbar = () => {
+  const auth = false;
   return (
     <Wrapper>
       <Container>
@@ -27,18 +28,20 @@ const Navbar = () => {
         <Subtitle>BOSHQARUV PANELI</Subtitle>
         {navbar.map((value, id) => {
           return (
-            <NavLink key={id} to={value.path}>
-              <div className="title">
-                <Icons src={value.icons} />
-                {value.title}
-              </div>
+            !value.hidden && (
+              <NavLink key={id} to={value.path}>
+                <div className="title">
+                  <Icons src={value.icons} />
+                  {value.title}
+                </div>
 
-              <Count type={value.title}>32</Count>
-            </NavLink>
+                <Count type={value.title}>32</Count>
+              </NavLink>
+            )
           );
         })}
       </Container>
-      <Outlet />
+      {auth ? <Outlet /> : <Navigate to="/signin" />}
     </Wrapper>
   );
 };
