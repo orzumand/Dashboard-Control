@@ -1,5 +1,7 @@
 import styled from "styled-components";
 import img from "../../Assets/Icon/backgrounf.png";
+import { ReactComponent as User } from "../../Assets/Icon/user.svg";
+import { ReactComponent as Lock } from "../../Assets/Icon/lock.svg";
 const Container = styled.div`
   display: flex;
   width: 100%;
@@ -25,6 +27,7 @@ const Right = styled.div`
 const Logo = styled.div`
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 20px;
 `;
 Logo.Img = styled.img`
@@ -56,4 +59,51 @@ Title.Subs = styled.div`
   font-weight: 300;
   font-size: 13px;
 `;
-export { Container, Left, Right, Logo, Title };
+
+const Form = styled.div`
+  padding: 0px 100px;
+  width: 100%;
+`;
+
+const Input = styled.div`
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #e5e4ed;
+  border-radius: 5px;
+  display: flex;
+  padding-right: 2px;
+  margin-bottom: 26px;
+  :focus-within {
+    border: 1px solid #00d9ff;
+  }
+`;
+Input.Input = styled.input`
+  width: 100%;
+  border: none;
+  height: 50px;
+  font-weight: 400;
+  font-size: 16px;
+  color: #aeacc6;
+
+  :focus {
+    outline: none;
+  }
+`;
+Input.User = styled(User)`
+  margin: 12px;
+  width: 24px;
+  height: 24px;
+`;
+Input.Lock = styled(Lock)`
+  margin: 12px;
+  width: 24px;
+  height: 24px;
+`;
+const TopTitle = styled.div`
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 22px;
+  margin-bottom: 2px;
+`;
+export { Container, Left, Right, Logo, Title, Form, TopTitle, Input };
