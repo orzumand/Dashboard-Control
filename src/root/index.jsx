@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
-import Navbar from "../Componets/Navbar";
+import Sidebar from "../Componets/Sidebar";
 import { navbar } from "../utils/navbar";
 
 const Root = () => {
@@ -13,7 +13,7 @@ const Root = () => {
               return hidden && <Route key={id} path={path} element={element} />;
             })}
           </Route>
-          <Route element={<Navbar />}>
+          <Route element={<Sidebar />}>
             {navbar.map((value) => {
               return (
                 <Route

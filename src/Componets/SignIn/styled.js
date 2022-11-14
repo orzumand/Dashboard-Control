@@ -71,8 +71,8 @@ const Input = styled.div`
   align-items: center;
   border: 1px solid #e5e4ed;
   border-radius: 5px;
-  display: flex;
   margin-bottom: 26px;
+  display: flex;
   padding-right: 2px;
   :focus-within {
     border: 1px solid #00d9ff;
