@@ -1,48 +1,62 @@
 import React from "react";
-import { Navigate, NavLink, Outlet } from "react-router-dom";
-import {
-  Container,
-  Logo,
-  Titles,
-  Wrapper,
-  Subtitle,
-  Icons,
-  Count,
-} from "./styled";
-import { navbar } from "../../utils/navbar";
-import img from "../../Assets/Img/Logo.png";
-const Navbar = () => {
-  const auth = true;
-  return (
-    <Wrapper>
-      <Container>
-        <Logo>
-          <Logo.Img src={img} />
-          <Titles>
-            O'z.Davlat
-            <br />
-            FILARMONIYASI
-            <Subtitle>Axborot tizimi</Subtitle>
-          </Titles>
-        </Logo>
-        <Subtitle>BOSHQARUV PANELI</Subtitle>
-        {navbar.map((value, id) => {
-          return (
-            !value.hidden && (
-              <NavLink key={id} to={value.path}>
-                <div className="title">
-                  <Icons src={value.icons} />
-                  {value.title}
-                </div>
+import { Input, Select, Searchbtn, User, SelectUser } from "./styled";
+import { Container } from "./styled";
+import { Button } from "../Generic";
 
-                <Count type={value.title}>32</Count>
-              </NavLink>
-            )
-          );
-        })}
-      </Container>
-      {auth ? <Outlet /> : <Navigate to="/signin" />}
-    </Wrapper>
+const Navbar = () => {
+  return (
+    <Container>
+      <div className="input">
+        <Input>
+          <Input.Search />
+          <Input.Input placeholder="Kalit so'zni kiriting" />
+          <div className="cut"></div>
+          <Select
+            id="cars"
+            name="carlist"
+            form="carform"
+            placeholder="Hujjat turi bo'yicha"
+          >
+            <option value="volvo">Hujjat turi bo'yicha</option>
+            <option value="saab">Saab</option>
+            <option value="opel">Opel</option>
+            <option value="audi">Audi</option>
+          </Select>
+        </Input>
+        <Button bg={"#0061FF"} height={50} width={130}>
+          <Searchbtn />
+          Izlash
+        </Button>
+      </div>
+      <div className="user">
+        <Select
+          id="cars"
+          name="carlist"
+          form="carform"
+          placeholder="Hujjat turi bo'yicha"
+          border={"1px solid #aeacc6"}
+        >
+          <option value="volvo">O'zbek tili</option>
+          <option value="saab">Saab</option>
+          <option value="opel">Opel</option>
+          <option value="audi">Audi</option>
+        </Select>
+        <SelectUser>
+          <User />
+          <Select
+            id="cars"
+            name="carlist"
+            form="carform"
+            placeholder="Hujjat turi bo'yicha"
+          >
+            <option value="volvo">Yo'ldashev Hayotbek</option>
+            <option value="saab">Saab</option>
+            <option value="opel">Opel</option>
+            <option value="audi">Audi</option>
+          </Select>
+        </SelectUser>
+      </div>
+    </Container>
   );
 };
 
