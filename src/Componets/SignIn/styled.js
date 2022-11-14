@@ -72,8 +72,8 @@ const Input = styled.div`
   border: 1px solid #e5e4ed;
   border-radius: 5px;
   display: flex;
-  padding-right: 2px;
   margin-bottom: 26px;
+  padding-right: 2px;
   :focus-within {
     border: 1px solid #00d9ff;
   }
@@ -88,6 +88,7 @@ Input.Input = styled.input`
 
   :focus {
     outline: none;
+    color: black;
   }
 `;
 Input.User = styled(User)`
@@ -106,4 +107,50 @@ const TopTitle = styled.div`
   line-height: 22px;
   margin-bottom: 2px;
 `;
-export { Container, Left, Right, Logo, Title, Form, TopTitle, Input };
+const Other = styled.div`
+  display: flex;
+  gap: 16px;
+  margin: 26px 0px;
+`;
+const OtherTitle = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  margin-top: 34px;
+
+  color: #a3a2b0;
+`;
+OtherTitle.Line = styled.div`
+  max-width: 170px;
+  width: 100%;
+  border-bottom: 1px solid #a3a2b0;
+`;
+const ForgotTitle = styled.a`
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  margin-top: -12px;
+  margin-bottom: 18px;
+  color: #a3a2b0;
+`;
+export {
+  Container,
+  Left,
+  Right,
+  Logo,
+  Title,
+  Form,
+  TopTitle,
+  Input,
+  Other,
+  OtherTitle,
+  ForgotTitle,
+};
