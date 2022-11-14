@@ -1,10 +1,13 @@
 import React from "react";
 import {
   Container,
+  ForgotTitle,
   Form,
   Input,
   Left,
   Logo,
+  Other,
+  OtherTitle,
   Right,
   Title,
   TopTitle,
@@ -53,10 +56,18 @@ const SignIn = () => {
             <Input.Lock />
             <Input.Input type="password" placeholder="**********" />
           </Input>
-
-          <div>
-            <Button bg={"#0018EF"}>TIZIMGA KIRISH</Button>
-          </div>
+          <ForgotTitle>Parolni unitdingizmi?</ForgotTitle>
+          <Button bg={"#0018EF"}>TIZIMGA KIRISH</Button>
+          <OtherTitle>
+            <OtherTitle.Line></OtherTitle.Line>
+            Boshqa tizimlar orqali kirish
+            <OtherTitle.Line></OtherTitle.Line>
+          </OtherTitle>
+          <Other>
+            <Button>ONE ID ORQALI </Button>
+            <Button>MF ID ORQALI</Button>
+            <Button>ERI ORQALI</Button>
+          </Other>
         </Form>
       </Right>
     </Container>
