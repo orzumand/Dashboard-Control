@@ -10,7 +10,7 @@ const Asosiy = () => {
         <div className="mainTitle">Asosiy</div>
         <CardWrapper>
           <Card>
-            <Icon type={"first"}>
+            <Icon className="icon" type={"first"}>
               <Icon.First />
             </Icon>
             <CardTitle>
@@ -21,7 +21,7 @@ const Asosiy = () => {
             </CardTitle>
           </Card>
           <Card>
-            <Icon type={"second"}>
+            <Icon className="icon" type={"second"}>
               <Icon.Second />
             </Icon>
             <CardTitle>
@@ -32,7 +32,7 @@ const Asosiy = () => {
             </CardTitle>
           </Card>
           <Card>
-            <Icon type={"third"}>
+            <Icon className="icon" type={"third"}>
               <Icon.Third />
             </Icon>
             <CardTitle>

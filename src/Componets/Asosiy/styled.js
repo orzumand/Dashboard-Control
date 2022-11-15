@@ -45,6 +45,13 @@ const Card = styled.div`
   background: #f4f8fa;
   border-radius: 10px;
   gap: 10px;
+  cursor: pointer;
+  :hover {
+    .icon {
+      box-shadow: 0px 15px 30px rgba(65, 45, 182, 0.21);
+    }
+    box-shadow: 0px 15px 30px rgba(65, 45, 182, 0.21);
+  }
 `;
 
 const Icon = styled.div`
