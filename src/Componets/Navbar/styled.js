@@ -55,6 +55,7 @@ Input.Search = styled(Search)`
 `;
 
 const Select = styled.select`
+  cursor: pointer;
   border: none;
   height: 100%;
   border-radius: 10px;

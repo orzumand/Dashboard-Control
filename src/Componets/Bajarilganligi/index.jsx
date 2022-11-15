@@ -1,8 +1,13 @@
 import React from "react";
 import { Container } from "./styled";
-
+import Navbar from "../Navbar";
 const Bajarilganligi = () => {
-  return <Container>Bajarilganligi</Container>;
+  return (
+    <Container>
+      <Navbar />
+      Bajarilganligi
+    </Container>
+  );
 };
 
 export default Bajarilganligi;
