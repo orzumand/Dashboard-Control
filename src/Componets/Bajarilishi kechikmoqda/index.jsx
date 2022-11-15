@@ -1,8 +1,13 @@
 import React from "react";
 import { Container } from "./styled";
-
+import Navbar from "../Navbar";
 const BajarilishiKechikmoqda = () => {
-  return <Container>BajarilishiKechikmoqda</Container>;
+  return (
+    <Container>
+      <Navbar />
+      BajarilishiKechikmoqda
+    </Container>
+  );
 };
 
 export default BajarilishiKechikmoqda;
