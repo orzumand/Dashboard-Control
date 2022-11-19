@@ -33,9 +33,9 @@ const Wrapper = styled.div`
   height: 100vh;
 `;
 const Container = styled.div`
-  width: 100%;
-  min-width: 280px;
-  max-width: 320px;
+  position: fixed;
+  height: 100vh;
+  width: 320px;
   background: #1d2343;
   display: flex;
   flex-direction: column;
@@ -114,4 +114,19 @@ const Count = styled.div`
   color: #ffffff;
   ${getType}
 `;
-export { Container, Wrapper, Logo, Titles, Subtitle, Icons, LinkCon, Count };
+
+const Out = styled.div`
+  width: 100%;
+  padding-left: 320px;
+`;
+export {
+  Container,
+  Wrapper,
+  Logo,
+  Titles,
+  Subtitle,
+  Icons,
+  LinkCon,
+  Count,
+  Out,
+};

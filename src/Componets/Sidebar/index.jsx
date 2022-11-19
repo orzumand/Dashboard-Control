@@ -8,6 +8,7 @@ import {
   Subtitle,
   Icons,
   Count,
+  Out,
 } from "./styled";
 import { navbar } from "../../utils/navbar";
 import img from "../../Assets/Img/Logo.png";
@@ -41,7 +42,7 @@ const Sidebar = () => {
           );
         })}
       </Container>
-      {auth ? <Outlet /> : <Navigate to="/signin" />}
+      <Out>{auth ? <Outlet /> : <Navigate to="/signin" />}</Out>
     </Wrapper>
   );
 };

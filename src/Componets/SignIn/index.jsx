@@ -14,8 +14,13 @@ import {
 } from "./styled";
 import Img from "../../Assets/Img/Logo.png";
 import { Button } from "../Generic";
+import { useNavigate } from "react-router-dom";
 
 const SignIn = () => {
+  const navigate = useNavigate();
+  const onClick = () => {
+    navigate("/asosiy");
+  };
   return (
     <Container>
       <Left>
@@ -57,7 +62,9 @@ const SignIn = () => {
             <Input.Input type="password" placeholder="**********" />
           </Input>
           <ForgotTitle>Parolni unitdingizmi?</ForgotTitle>
-          <Button bg={"#0018EF"}>TIZIMGA KIRISH</Button>
+          <Button onClick={onClick} bg={"#0018EF"}>
+            TIZIMGA KIRISH
+          </Button>
           <OtherTitle>
             <OtherTitle.Line></OtherTitle.Line>
             Boshqa tizimlar orqali kirish

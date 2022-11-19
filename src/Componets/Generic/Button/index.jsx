@@ -1,9 +1,9 @@
 import React from "react";
 import { Container } from "./style";
 
-const Button = ({ bg, width, height, children }) => {
+const Button = ({ onClick, bg, width, height, children }) => {
   return (
-    <Container bg={bg} width={width} height={height}>
+    <Container onClick={onClick} bg={bg} width={width} height={height}>
       {children}
     </Container>
   );
