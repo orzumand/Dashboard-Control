@@ -10,6 +10,7 @@ import i2 from "../Assets/Icon/chart.png";
 import i3 from "../Assets/Icon/chart-success.png";
 import i4 from "../Assets/Icon/health.png";
 import i5 from "../Assets/Icon/frame.png";
+import BatafsilPage from "../Pages/Batafsil";
 export const navbar = [
   {
     id: useId,
@@ -61,8 +62,17 @@ export const navbar = [
     element: <SignInPage />,
     path: "/signin",
     title: "SignIn",
-    private: false,
+    private: true,
     hidden: true,
+    icons: null,
+  },
+  {
+    id: useId,
+    element: <BatafsilPage />,
+    path: "/loyihalar/batafsil",
+    title: "batafsil",
+    private: true,
+    hidden: false,
     icons: null,
   },
 ];
