@@ -9,20 +9,21 @@ const Main = styled.div`
 `;
 const Table = styled.table`
   margin-top: 16px;
-  text-align: center;
   width: 100%;
   font-size: 14px;
   border-spacing: 0px;
+
+  tr:nth-child(even) {
+    background-color: #f7f9fd;
+  }
   td:first-child {
-    width: 60px;
+    font-weight: 600;
   }
-  tr:first-child {
-    background-color: #dfe2ef;
-  }
-  td,
-  th {
+  td {
+    width: 50%;
     height: 50px;
     border: 1px solid #dfe2ef;
+    padding: 0px 20px;
   }
 `;
 export { Container, Main, Table };

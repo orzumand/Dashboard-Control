@@ -1,17 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Container, Main, Table } from "./styled";
 import Navbar from "../Navbar";
-// import { list } from "../../Mock/data";
+import { list } from "../../Mock/data";
 
 const Batafsil = () => {
-  const [data, setData] = useState([]);
-
-  useEffect(() => {
-    fetch("https://jsonplaceholder.typicode.com/users")
-      .then((response) => response.json())
-      .then((json) => setData(json));
-  }, []);
-
   return (
     <Container>
       <Navbar />
@@ -20,29 +12,65 @@ const Batafsil = () => {
         <Table>
           <tbody>
             <tr>
-              <th>№</th>
-              <th>Logotip</th>
-              <th>Loyiha nomi</th>
-              <th>Loyiha Id raqami</th>
-              <th>Ishlab chiqarish asosi</th>
-              <th>Ishlab chiqarish muddati</th>
-              <th>Loyiha haqida to'liq</th>
+              <td>Asos</td>
+              <td>{list[0].asos}</td>
             </tr>
-            {data?.map((value, index) => {
-              return (
-                <tr key={index}>
-                  <td>{index + 1}</td>
-                  <td>{value?.username}</td>
-                  <td>{value?.name}</td>
-                  <td>{value?.address?.suite}</td>
-                  <td>{value?.address.street}</td>
-                  <td>{value?.address.zipcode}</td>
-                  <td>
-                    <a href="/">batafsil..</a>
-                  </td>
-                </tr>
-              );
-            })}
+            <tr>
+              <td>Logotip</td>
+              <td>{list[0].logotip}</td>
+            </tr>
+            <tr>
+              <td>Loyiha nomi</td>
+              <td>{list[0].loyihaNomi}</td>
+            </tr>
+            <tr>
+              <td>Muddat</td>
+              <td>{list[0].muddat}</td>
+            </tr>
+            <tr>
+              <td>Kim tomonidan</td>
+              <td>{list[0].user}</td>
+            </tr>
+            <tr>
+              <td>Asos</td>
+              <td>{list[0].asos}</td>
+            </tr>
+            <tr>
+              <td>Logotip</td>
+              <td>{list[0].logotip}</td>
+            </tr>
+            <tr>
+              <td>Loyiha nomi</td>
+              <td>{list[0].loyihaNomi}</td>
+            </tr>
+            <tr>
+              <td>Muddat</td>
+              <td>{list[0].muddat}</td>
+            </tr>
+            <tr>
+              <td>Kim tomonidan</td>
+              <td>{list[0].user}</td>
+            </tr>
+            <tr>
+              <td>Asos</td>
+              <td>{list[0].asos}</td>
+            </tr>
+            <tr>
+              <td>Logotip</td>
+              <td>{list[0].logotip}</td>
+            </tr>
+            <tr>
+              <td>Loyiha nomi</td>
+              <td>{list[0].loyihaNomi}</td>
+            </tr>
+            <tr>
+              <td>Muddat</td>
+              <td>{list[0].muddat}</td>
+            </tr>
+            <tr>
+              <td>Kim tomonidan</td>
+              <td>{list[0].user}</td>
+            </tr>
           </tbody>
         </Table>
       </Main>
