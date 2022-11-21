@@ -29,7 +29,7 @@ const Sidebar = () => {
         <Subtitle>BOSHQARUV PANELI</Subtitle>
         {navbar.map((value, id) => {
           return (
-            !value.hidden && (
+            !value.private && (
               <NavLink key={id} to={value.path}>
                 <div className="title">
                   <Icons src={value.icons} />

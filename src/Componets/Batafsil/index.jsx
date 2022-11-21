@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { Container, Main, Table } from "./styled";
 import Navbar from "../Navbar";
-import { useNavigate } from "react-router-dom";
 // import { list } from "../../Mock/data";
 
-const Loyihalar = () => {
+const Batafsil = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
@@ -12,10 +11,7 @@ const Loyihalar = () => {
       .then((response) => response.json())
       .then((json) => setData(json));
   }, []);
-  const navigate = useNavigate();
-  const onClick = () => {
-    navigate("/loyihalar/batafsil");
-  };
+
   return (
     <Container>
       <Navbar />
@@ -42,7 +38,7 @@ const Loyihalar = () => {
                   <td>{value?.address.street}</td>
                   <td>{value?.address.zipcode}</td>
                   <td>
-                    <div onClick={onClick}>batafsil...</div>
+                    <a href="/">batafsil..</a>
                   </td>
                 </tr>
               );
@@ -54,4 +50,4 @@ const Loyihalar = () => {
   );
 };
 
-export default Loyihalar;
+export default Batafsil;
